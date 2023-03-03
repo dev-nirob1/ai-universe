@@ -23,6 +23,19 @@ const showCardItems = cards => {
             <button class="bg-red-300 text-red-600 rounded-full p-3 text-xl"><i
              class="fa-solid fa-arrow-right"></i></button>`
         cardContainer.appendChild(cardDiv)
+        
+        loaderSection(false);
     })
+}
+
+
+const loaderSection = isLoading => {
+    const loader = document.getElementById('loader');
+    if(isLoading){
+        loader.classList.remove('hidden')
+    }
+    else{
+        loader.classList.add('hidden')
+    }
 }
 fetchCategories()
