@@ -105,9 +105,13 @@ const showDetailsInModal = cards => {
     `
     const rightDetailsSection = document.getElementById('right-section');
     rightDetailsSection.innerHTML = `
-    <img src="${cards.image_link}" alt="logo">
+    <div class="badge badge-secondary px-8 py-3 absolute top-6 right-10">${cards.accuracy.score*100}'% accuracy'
+     </div>
+    <img src="${cards.image_link[0]}" alt="logo">
     <h4 class="text-xl font-semibold mt-4">${cards.input_output_examples[0].input}</h4>
     <p class="my-5">${cards.input_output_examples[0].output}</p>
+    
+
     `
 }
 showDetails();
