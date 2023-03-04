@@ -88,6 +88,9 @@ const showDetailsInModal = cards => {
         <h2 class="text-xl font-semibold">Features</h2>
         <ul>
             ${cards.features[1].feature_name?`<li class="list-disc text-md">${cards.features[1].feature_name}</li>` : ""}
+            ${cards.features[2].feature_name?`<li class="list-disc text-md">${cards.features[2].feature_name}</li>` : ""}
+            ${cards.features[3].feature_name?`<li class="list-disc text-md">${cards.features[3].feature_name}</li>` : ""}
+            ${cards.features[3].feature_name?`<li class="list-disc text-md">${cards.features[3].feature_name}</li>` : ""}
             
         </ul>
     `
