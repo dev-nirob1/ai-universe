@@ -31,10 +31,7 @@
 
     </section>
     <!-- see more button  -->
-    <div class="text-center">
-        <button onclick="showMoreData()" id="see-more-btn" class="bg-red-500 rounded-lg text-xl font-semibold text-white px-7 py-6">See
-            More</button>
-    </div>
+   
     <!-- loader -->
     <section id="loader" class="hidden">
         <div class="flex items-center justify-center">
@@ -54,28 +51,31 @@
         </div>
     </section>
 
+    <div class="text-center">
+        <button onclick="showMoreData()" id="see-more-btn" class="bg-red-500 hidden rounded-lg text-xl font-semibold text-white px-7 py-6">See
+            More</button>
+    </div>
+
     <!-- modal section  -->
     <section>
 
         <input type="checkbox" id="my-modal-5" class="modal-toggle" />
         <div class="modal">
             <div class="modal-box w-11/12 max-w-5xl">
-                <div class="grid grid-cols-2 gap-5">
-                    <div class="border rounded-lg">
-                        <div class="modal-description">
-                            description
+                <div id="cards-information" class="grid grid-cols-2 gap-5">
+                    <div class="border rounded-lg p-5 bg-red-200">
+                        <div id="description">
+                            <h4 class="font-semibold text-2xl"></h4>
                         </div>
-                        <div class="grid grid-cols-3 gap-3">
-                            <div>hi</div>
-                            <div>hello</div>
-                            <div>bye</div>
+                        <div id="pricing" class="grid grid-cols-3 gap-3 my-5">
+                            
                         </div>
 
                         <div class="grid grid-cols-2 gap-5">
-                            <div>features
+                            <div id="features">
 
                             </div>
-                            <div>integration
+                            <div id="integration">
 
                             </div>
                         </div>
@@ -87,17 +87,15 @@
                         <p>description</p>
                     </div>
                 </div>
-                
-
 
                 <div class="modal-action">
                     <label for="my-modal-5" class="btn"><i class="fa-solid fa-xmark"></i></label>
                 </div>
-
             </div>
         </div>
 
     </section>
+    
 
 
     <!-- javascript cdn  -->
