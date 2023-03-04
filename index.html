@@ -17,11 +17,21 @@
 </head>
 
 <body onload="loaderSection(true)">
+
     <header class="text-center my-10">
         <h1 class="text-5xl font-semibold mb-8">AI Universe Hub</h1>
         <button class="rounded-xl text-white bg-red-500 px-7 py-6 text-xl font-medium">Sort By Date</button>
     </header>
 
+    
+    <section id="card-container" class="my-10 grid grid-cols-12 gap-5 md:grid-cols-3 container mx-auto">
+        
+    </section>
+    <!-- see more button  -->
+        <div class="text-center">
+            <button id="see-more-btn" class="bg-red-500 hidden rounded-lg text-xl font-semibold text-white px-7 py-6">See More</button>
+        </div>
+    <!-- loader -->
     <section id="loader" class="hidden">
         <div class="flex items-center justify-center">
             <div role="status">
@@ -33,11 +43,6 @@
             </div>
         </div>
     </section>
-
-    <section id="card-items" class="my-10 grid grid-cols-12 gap-5 md:grid-cols-3 container mx-auto">
-
-    </section>
-    <!-- loader -->
 
     <!-- flowbite cdn  -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.js"></script>
