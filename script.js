@@ -74,35 +74,40 @@ const showDetailsInModal = cards => {
     const pricing = document.getElementById('pricing');
     pricing.innerHTML = `
     <div class="bg-white rounded-md p-3">
-    <h4 class=" w-full whitespace-normal text-center font-semibold text-green-600">${cards.pricing[0]?cards.pricing[0].price : 'Free of Cost'}/${cards.pricing[0]?cards.pricing[0].plan : 'Basic'}</h4>
+    <h4 class=" w-full whitespace-normal text-center font-semibold text-green-600">${cards.pricing[0]?cards.pricing[0].price : 'Free of Cost'} /${cards.pricing[0]?cards.pricing[0].plan : 'Basic'}</h4>
     </div>
     <div class="bg-white rounded-md p-3">
-    <h4 class=" w-full whitespace-normal text-center font-semibold text-orange-600">${cards.pricing[1]?cards.pricing[1].price : 'Free of Cost'}/${cards.pricing[1]?cards.pricing[1].plan : 'Basic'}</h4>
+    <h4 class=" w-full whitespace-normal text-center font-semibold text-orange-600">${cards.pricing[1]?cards.pricing[1].price : 'Free of Cost'} /${cards.pricing[1]?cards.pricing[1].plan : 'Basic'}</h4>
     </div>
     <div class="bg-white rounded-md p-3">
-    <h4 class=" whitespace-normal text-center font-semibold text-red-600">${cards.pricing[2]?cards.pricing[2].price : 'Free of Cost'}/${cards.pricing[2]?cards.pricing[2].plan : 'Basic'}</h4>
+    <h4 class=" whitespace-normal text-center font-semibold text-red-600">${cards.pricing[2]?cards.pricing[2].price : 'Free of Cost'} /${cards.pricing[2]?cards.pricing[2].plan : 'Basic'}</h4>
     </div>
     `
     const features = document.getElementById('features');
     features.innerHTML = `
-        <h2 class="text-xl font-semibold">Features</h2>
-        <ul>
-            ${cards.features[1].feature_name?`<li class="list-disc text-md">${cards.features[1].feature_name}</li>` : ""}
-            ${cards.features[2].feature_name?`<li class="list-disc text-md">${cards.features[2].feature_name}</li>` : ""}
-            ${cards.features[3].feature_name?`<li class="list-disc text-md">${cards.features[3].feature_name}</li>` : ""}
-            ${cards.features[3].feature_name?`<li class="list-disc text-md">${cards.features[3].feature_name}</li>` : ""}
-            
+        <h4 class="text-xl font-semibold">Features</h4>
+        <ul class="pl-5">
+            ${cards.features[1].feature_name?`<li class="list-disc">${cards.features[1].feature_name}</li>` : ""}
+            ${cards.features[2].feature_name?`<li class="list-disc">${cards.features[2].feature_name}</li>` : ""}
+            ${cards.features[3].feature_name?`<li class="list-disc">${cards.features[3].feature_name}</li>` : ""}
+            ${cards.features[3].feature_name?`<li class="list-disc">${cards.features[3].feature_name}</li>` : ""}
         </ul>
     `
 
     const integration = document.getElementById('integration');
-    integration.innerHTML= `<h2 class="text-xl font-semibold">Integrations</h2>
-    <ul>
+    integration.innerHTML= `<h4 class="text-xl font-semibold">Integrations</h4>
+    <ul class="pl-5">
     ${cards.integrations[0]? `<li class="list-disc text-md">${cards.integrations[0]}</li>` : ""}
     ${cards.integrations[1]? `<li class="list-disc text-md">${cards.integrations[1]}</li>` : ""}
     ${cards.integrations[2]? `<li class="list-disc text-md">${cards.integrations[2]}</li>` : ""}
     
     </ul>
+    `
+    const rightDetailsSection = document.getElementById('right-section');
+    rightDetailsSection.innerHTML = `
+    <img src="${cards.image_link}" alt="logo">
+    <h4 class="text-xl font-semibold mt-4">${cards.input_output_examples[0].input}</h4>
+    <p class="my-5">${cards.input_output_examples[0].output}</p>
     `
 }
 showDetails();
