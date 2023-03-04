@@ -1,5 +1,5 @@
 const fetchCategories = () => {
-    fetch('https://openapi.programming-hero.com/api/ai/tools').then(res => res.json()).then(data => showCardItems(data.data.tools))
+    fetch('https://openapi.programming-hero.com/api/ai/tools').then(res => res.json()).then(data => showCardItems(data.data.tools.slice(0, 6)))
 }
 
 // card-items and see-more-btn 
@@ -8,15 +8,15 @@ const showCardItems = cards => {
 
     const seeMoreButton = document.getElementById('see-more-btn')
 
-    if (cards.length > 6) {
-        cards = cards.slice(0, 6);
+    if (cards.length < 12) {
         seeMoreButton.classList.remove('hidden');
     }
     else {
         seeMoreButton.classList.add('hidden')
     }
-    const cardContainer = document.getElementById('card-container');
 
+    const cardContainer = document.getElementById('card-container');
+    cardContainer.innerHTML ="";
     cards.forEach(card => {
         const cardDiv = document.createElement('div');
         cardDiv.classList.add("card", "p-3", "border", "rounded-lg");
@@ -54,3 +54,8 @@ const loaderSection = isLoading => {
 }
 
 fetchCategories()
+
+const showMoreData = () =>{
+    fetch('https://openapi.programming-hero.com/api/ai/tools').then(res => res.json()).then(data => showCardItems(data.data.tools));
+    
+}

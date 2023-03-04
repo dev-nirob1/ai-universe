@@ -32,7 +32,7 @@
     </section>
     <!-- see more button  -->
     <div class="text-center">
-        <button id="see-more-btn" class="bg-red-500 hidden rounded-lg text-xl font-semibold text-white px-7 py-6">See
+        <button onclick="showMoreData()" id="see-more-btn" class="bg-red-500 rounded-lg text-xl font-semibold text-white px-7 py-6">See
             More</button>
     </div>
     <!-- loader -->
@@ -56,16 +56,44 @@
 
     <!-- modal section  -->
     <section>
-       
+
         <input type="checkbox" id="my-modal-5" class="modal-toggle" />
         <div class="modal">
             <div class="modal-box w-11/12 max-w-5xl">
-                <h3 class="font-bold text-lg">Congratulations random Internet user!</h3>
-                <p class="py-4">You've been selected for a chance to get one year of subscription to use Wikipedia for
-                    free!</p>
-                <div class="modal-action">
-                    <label for="my-modal-5" class="btn">Yay!</label>
+                <div class="grid grid-cols-2 gap-5">
+                    <div class="border rounded-lg">
+                        <div class="modal-description">
+                            description
+                        </div>
+                        <div class="grid grid-cols-3 gap-3">
+                            <div>hi</div>
+                            <div>hello</div>
+                            <div>bye</div>
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-5">
+                            <div>features
+
+                            </div>
+                            <div>integration
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="border rounded-lg">
+                        <img src="" alt="image">
+                        title
+                        <p>description</p>
+                    </div>
                 </div>
+                
+
+
+                <div class="modal-action">
+                    <label for="my-modal-5" class="btn"><i class="fa-solid fa-xmark"></i></label>
+                </div>
+
             </div>
         </div>
 
